@@ -1,0 +1,410 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cadetblue;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.container .left {
+    width: 300px;
+    height: 100vh;
+    background-color: powderblue;
+    float: left;
+    padding-top: 50px;
+    transition: 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+
+
+}
+
+.container .left:hover {
+    filter: drop-shadow(8px 8px 10px rgb(53, 53, 53));
+    background-color: lightgray;
+    
+}
+
+.container .right {
+    width: calc(100% - 300px);
+    height: 100vh;
+    background-color: cadetblue;
+    float: right;
+    padding-top: calc((100vh - 570px) / 2);
+
+}
+
+.container .left .logo {
+    width: 100px;
+    height: 100px;
+    background-image: url("../image/logo.jpg");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.container .left .logo:hover {
+    border-radius: 50%;
+    background-image: url("../image/cat.jpg")
+}
+
+.container .left ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.container .left ul a {
+    display: block;
+}
+
+.container .left ul a {
+    margin-bottom: 10px;
+
+}
+
+.container .left ul a:last-child {
+    margin-bottom: 0px;
+}
+
+.container .right .big-box {
+    width: 956px;
+    height: 570px;
+    margin: 0 auto;
+    background-color: cadetblue;
+}
+
+.container .right .big-box .small-box {
+    width: calc((956px / 3) - 5px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    float: left;
+    cursor: pointer;
+    transition: 1.5s cubic-bezier(0.5, 0, 0.75, 0);
+
+}
+
+
+.container .right .big-box .small-box:hover {
+    filter: drop-shadow(8px 8px 10px rgb(53, 53, 53));
+    transition: 0.2s cubic-bezier(0.5, 0, 0.75, 0);
+   
+}
+
+.container .right .big-box .boxleft {
+    background-image: url("../image/cat3.jpg");
+    background-position: 40% 30%;
+
+}
+
+.container .right .big-box .boxleft:hover {
+    background-image: url("../image/cat2.jpg");
+    background-position: 36% 60%;
+
+
+
+}
+
+.container .right .big-box .boxmid {
+    margin: 0px calc(15px /2);
+    background-image: url("../image/cat3.jpg");
+    background-position: 68% 30%;
+}
+
+.container .right .big-box .boxmid:hover {
+    background-image: url("../image/cat2.jpg");
+    background-position: 52% 60%;
+
+}
+
+.container .right .big-box .boxright {
+    background-image: url("../image/cat3.jpg");
+    background-position: 95% 30%;
+}
+
+.container .right .big-box .boxright:hover {
+    background-image: url("../image/cat2.jpg");
+    background-position: 67% 60%;
+
+
+}
+
+
+a {
+    text-decoration: none;
+    transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+a:link {
+    color: rgb(69, 116, 117);
+}
+
+a:visited {
+    color: rgb(255, 255, 254);
+}
+
+a:active {
+    text-decoration: none;
+    color: brown;
+}
+
+a:hover {
+    font-size: 20px;
+    font-weight: bolder;
+    color: palevioletred;
+
+}
+
+
+
+
+@media (max-width:1280px) {
+
+    .container {
+        transition: 0.1s;
+    }
+
+    .container .right {
+        padding-top: calc((100vh - 569px) / 2);
+    }
+
+    .container .right .big-box {
+        width: 800px;
+        height: 569px;
+        transition: 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .container .right .big-box .boxleft {
+        width: 100%;
+        height: calc(50% - 5px);
+        margin-bottom: 5px;
+        background-image: url("../image/cat2.jpg");
+        background-position: 40% 45%;
+    }
+
+    .container .right .big-box .boxleft:hover {
+        background-image: url("../image/cat3.jpg");
+        background-position: 82% 20%;
+
+    }
+
+    .container .right .big-box .boxmid {
+        margin: 0px 5px 0px 0px;
+        background-image: url("../image/cat2.jpg");
+        background-position: 33% 67%;
+    }
+
+    .container .right .big-box .boxmid:hover {
+        background-image: url("../image/cat3.jpg");
+        background-position: 52% 50%;
+    }
+
+    .container .right .big-box .boxright {
+        margin-left: 5px;
+        background-image: url("../image/cat2.jpg");
+        background-position: 52% 67%;
+    }
+
+    .container .right .big-box .boxright:hover {
+        background-image: url("../image/cat3.jpg");
+        background-position: 89% 50%;
+    }
+
+    .container .right .big-box .boxmid,
+    .container .right .big-box .boxright {
+        width: calc(50% - 5px);
+        height: calc(50% - 5px);
+        margin-top: 5px;
+    }
+
+
+}
+
+/* 768px 大框是 w700px h800px */
+/* 但是因為w在1100px會爆版 需問設計師是否可以提前變版或者如何解決 */
+/* 此次設定先以不爆版為主 */
+@media (max-width:1100px) {
+
+    .container .left {
+        width: 100%;
+        height: 100px;
+        padding-top: 10px;
+
+    }
+
+    .container .right {
+        width: 100%;
+        height: calc(100vh - 100px);
+        padding-top: calc((100vh - 900px) / 2);
+
+    }
+
+    .container .left .logo {
+        width: 80px;
+        height: 80px;
+        margin: 0px 0px 0px 34px;
+        float: left;
+    }
+
+
+    .container .left ul {
+        margin-top: 18px;
+        float: right;
+
+    }
+
+    .container .left ul a {
+        float: left;
+        margin-right: 25px;
+
+    }
+
+
+    .container .right .big-box {
+        width: 700px;
+        height: 800px;
+    }
+
+    .container .right .big-box .boxleft {
+        background-image: url("../image/cat3.jpg");
+        background-position: 78% 10%;
+
+    }
+
+    .container .right .big-box .boxleft:hover {
+        background-image: url("../image/cat2.jpg");
+        background-position: 43% 40%;
+
+    }
+
+    .container .right .big-box .boxmid {
+        background-image: url("../image/cat3.jpg");
+        background-position: 54% 60%;
+    }
+
+    .container .right .big-box .boxmid:hover {
+        background-image: url("../image/cat2.jpg");
+        background-position: 35% 73%;
+    }
+
+    .container .right .big-box .boxright {
+        background-image: url("../image/cat3.jpg");
+        background-position: 85% 60%;
+    }
+
+    .container .right .big-box .boxright:hover {
+        background-image: url("../image/cat2.jpg");
+        background-position: 53% 74%;
+    }
+}
+
+@media (max-width:700px) {
+    .container .left {
+        height: 80px;
+        padding: 12px;
+    }
+
+    .container .left .logo {
+        width: 54px;
+        height: 54px;
+        margin: 0 auto;
+        float: unset;
+    }
+
+    .container .left .ham {
+        width: 54px;
+        height: 54px;
+        background-color: peachpuff;
+        float: left;
+        position: relative;
+        top: -53px;
+        left: 5px;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+    .container .left .ham:hover {
+        width: 65px;
+        height: 65px;
+        top: -58px;
+        background-color: khaki;
+        border-radius: 50%;
+    }
+
+    .container .left .ham ul {
+        float: unset;
+        background-color: rgba(211, 211, 211, 0.616);
+        padding: 5px;
+        position: absolute;
+        top: 45px;
+        left: 10px;
+        z-index: 1;
+        border-radius: 10px;
+        display: none;
+        /* 使元素消失 */
+    }
+
+    .container .left .ham:hover ul {
+        transition: 0.5s;
+        display: block;
+        /* 滑鼠移到ham時觸發ul */
+    }
+
+    .container .right {
+        padding-top: 0;
+    }
+
+    .container .right .big-box {
+        width: 100%;
+        height: calc(100vh - 80px);
+    }
+
+    .container .right .big-box .small-box {
+        width: 100%;
+        height: calc((100vh - 80px) / 3);
+        margin: 0;
+    }
+
+    .container .right .big-box .boxleft {
+        background-image: url("../image/cat3.jpg");
+        background-position: 73% 7%;
+    }
+
+    .container .right .big-box .boxleft:hover {
+        background-image: url("../image/cat2.jpg");
+        background-position: 43% 30%;
+    }
+
+    .container .right .big-box .boxmid {
+        background-image: url("../image/cat3.jpg");
+        background-position: 73% 39%;
+    }
+
+    .container .right .big-box .boxmid:hover {
+        background-image: url("../image/cat2.jpg");
+        background-position: 43% 52.5%;
+    }
+
+    .container .right .big-box .boxright {
+        background-image: url("../image/cat3.jpg");
+        background-position: 73% 71.5%;
+    }
+
+    .container .right .big-box .boxright:hover {
+        background-image: url("../image/cat2.jpg");
+        background-position: 43% 73%;
+    }
+
+}
